@@ -2,7 +2,7 @@
   <v-app dark>
     <Navbar />
 
-    <v-main>
+    <v-main class="ma-4">
       <router-view/>
     </v-main>
    

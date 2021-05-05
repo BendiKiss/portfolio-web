@@ -1,34 +1,40 @@
 <template>
   <nav id="Navbar" >
    
-  <v-toolbar dark >
+  <v-toolbar height="100" class="secondary">
     
-    <div id="nav-left" class="ma-3">
+    <div id="nav-left" >
         <router-link to="/home" id="logo">
-          <img src="assets/Logo.png" alt="Logo"/>
+          <v-btn light height="60" width="60" class="ma-5"><v-img
+          :src="require('../assets/Logo.svg')"
+          class="ma-2"
+          contain
+          height="40"
+          width="30"
+        ></v-img></v-btn>
         </router-link>
       </div>
   <v-spacer></v-spacer>
 
-      <v-toolbar-side-icon class="yellow--text hidden-sm-and-up" @click="drawer = !drawer" id="hamburger"><v-app-bar-nav-icon></v-app-bar-nav-icon></v-toolbar-side-icon>
+      <v-toolbar-side-icon class="hidden-sm-and-up" @click="drawer = !drawer" id="hamburger"><v-app-bar-nav-icon dark></v-app-bar-nav-icon></v-toolbar-side-icon>
 
    <div id="nav-right" class="ma-4 hidden-xs-only" >
-          <router-link to="/home"><v-btn id="box1" light class="yellow">Home</v-btn></router-link>
-          <router-link to="/about"><v-btn id="box2" light class="yellow">About</v-btn></router-link>
-          <router-link to="/Archives"><v-btn id="box3" light class="yellow">Archives</v-btn></router-link>
-          <router-link to="/ContactMe"><v-btn id="box4" light class="yellow">Contact me</v-btn></router-link>
+          <router-link to="/home"><v-btn id="box1" light class="primary ma-1 " height="60">Home</v-btn></router-link>
+          <router-link to="/about"><v-btn id="box2" light class="primary ma-1" height="60">About</v-btn></router-link>
+          <router-link to="/Archives"><v-btn id="box3" light class="primary ma-1" height="60">Archives</v-btn></router-link>
+          <router-link to="/ContactMe"><v-btn id="box4" light class="primary ma-1" height="60">Contact me</v-btn></router-link>
   </div>
   </v-toolbar> 
 
-    <v-navigation-drawer dark app right wrap v-model="drawer" class="yellow hidden-sm-and-up">
-      <v-list >
+    <v-navigation-drawer app right v-model="drawer" class="primary hidden-sm-and-up">
+      
+
+            <router-link to="/home" class="ma-8"><v-btn>Home</v-btn></router-link>
+            <router-link to="/about" class="ma-8"><v-btn>About</v-btn></router-link>
+            <router-link to="/Archives" class="ma-8"><v-btn>Archives</v-btn></router-link>
+            <router-link to="/ContactMe" class="ma-8"><v-btn>Contact me</v-btn></router-link>
         
-            <router-link to="/home"><v-btn id="box1">Home</v-btn></router-link>
-            <router-link to="/about"><v-btn id="box2">About</v-btn></router-link>
-            <router-link to="/Archives"><v-btn id="box3">Archives</v-btn></router-link>
-            <router-link to="/ContactMe"><v-btn id="box4">Contact me</v-btn></router-link>
-        
-      </v-list>
+      
     </v-navigation-drawer>
             
   </nav>
