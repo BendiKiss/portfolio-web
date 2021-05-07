@@ -1,7 +1,7 @@
 <template>
   <nav id="Navbar" >
    
-  <v-toolbar height="100" class="secondary">
+  <v-toolbar height="100" class="secondary" >
     
     <div id="nav-left" >
         <router-link to="/home" id="logo">
@@ -27,16 +27,12 @@
   </v-toolbar> 
 
     <v-navigation-drawer app right v-model="drawer" class="primary hidden-sm-and-up">
-      
-
             <router-link to="/home" class="ma-8"><v-btn>Home</v-btn></router-link>
             <router-link to="/about" class="ma-8"><v-btn>About</v-btn></router-link>
-            <router-link to="/Archives" class="ma-8"><v-btn>Archives</v-btn></router-link>
-            <router-link to="/ContactMe" class="ma-8"><v-btn>Contact me</v-btn></router-link>
-        
-      
-    </v-navigation-drawer>
-            
+            <router-link to="/Archives" class="ma-5"><v-btn>Archives</v-btn></router-link>
+            <router-link to="/ContactMe" class="ma-5"><v-btn>Contact me</v-btn></router-link>
+    </v-navigation-drawer>  
+
   </nav>
   
 </template>
@@ -52,9 +48,14 @@ export default {
 </script>
 
 <style>
-#Navbar{
-  font-family: Helvetica, Arial, sans-serif;
-  display: flex;
-}
+
+#box1{
+  color: #232323;}
+#box2{
+  color: #232323;}
+#box3{
+  color: #232323;}
+#box4{
+  color: #232323;}
 
 </style>
