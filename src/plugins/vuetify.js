@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify/lib/framework'
+import Embed from 'v-video-embed'
 
 Vue.use(Vuetify,)
 
@@ -15,4 +16,4 @@ export default new Vuetify({
         },
       },
     }})
-
+    Vue.use(Embed);

@@ -2,7 +2,7 @@
     <div>
         <div class="footer">
     
-        <strong class="subheading ma-4">Get connected with us on social networks!</strong>
+        <strong class="subheading ma-4">Get connected with me on social networks!</strong>
 
     <v-spacer></v-spacer>
 
@@ -12,13 +12,18 @@
     <v-spacer></v-spacer>
         <v-btn
           v-for="icon in icons"
-          :key="icon"
+          :key="icon.name"
           class="mx-4"
           dark
           icon
+          :href="icon.urllink"
         >
           <v-icon size="24px">
-            {{ icon }}
+              
+           
+                
+            {{ icon.name }}
+            
           </v-icon>
         </v-btn>
     
@@ -33,10 +38,26 @@
     export default {
     data: () => ({
       icons: [
-        'mdi-facebook',
-        'mdi-youtube',
-        'mdi-linkedin',
-        'mdi-instagram',
+          {
+                name:  'mdi-facebook',
+                urllink: "https://www.facebook.com/bendeguz.kiss.7"
+          },
+          {
+                name: 'mdi-youtube',
+                urllink: "https://www.youtube.com/channel/UCPFX_UHeBwAkCqta9QiRiyw"
+          },
+          {
+                name: 'mdi-linkedin',
+                urllink: "https://www.linkedin.com/in/bendegúzkiss-multimedia/"
+          },
+          {
+                name: 'mdi-instagram',
+                urllink: "https://www.instagram.com/bendeguz_kiss/"
+          }
+       
+        
+        
+     
       ],
     }),
   }

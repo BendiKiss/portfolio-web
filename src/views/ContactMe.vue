@@ -1,5 +1,5 @@
 <template>
-  <div class="contactme ma-4 pa-4">
+  <div class="contactme ma-4 pa-4" justify="center" align="center">
     <h1>Let's connect!</h1>
     <v-container class="primary secondary--text ma-4 pa-4">
       <p>You can find me on many social media platforms and see it for yourself.<br>
@@ -7,28 +7,31 @@
       Do you think I'm just saying? Try it yourself!</p>
     </v-container>
 
-     <div>
+    <v-container class="secondary">
+      
+     <div column="2" class="primary--text">
+        Get in touch!<br>
        <v-btn
           v-for="icon in icons"
-          :key="icon"
+          :key="icon.name"
           class="mx-4"
+          dark
           icon
-          wrap
+          :href="icon.urllink"
         >
           <v-icon size="24px">
-            {{ icon }}
+              
+           
+                
+            {{ icon.name }}
+            
           </v-icon>
-        </v-btn> <br>
-       https://www.linkedin.com/in/bendegúzkiss-multimedia/ <br>
-    
-       https://www.facebook.com/bendeguz.kiss.7 <br>
-     
-       https://www.instagram.com/bendeguz_kiss/ <br>
-       
-       https://www.youtube.com/channel/UCPFX_UHeBwAkCqta9QiRiyw <br>
-      Here is my email adress: bendeguzkiss1818@gmail.com <br>
-      Get in touch!
+        </v-btn> 
+       <br>     
+       Here is my email adress: bendeguzkiss1818@gmail.com <br>
+      
      </div>
+    </v-container>
     
 
 
@@ -39,12 +42,23 @@
 export default {
     data: () => ({
       icons: [
-        'mdi-facebook',
-        'mdi-youtube',
-        'mdi-linkedin',
-        'mdi-instagram',
-      ],
-    }),
+          {
+                name:  'mdi-facebook',
+                urllink: "https://www.facebook.com/bendeguz.kiss.7"
+          },
+          {
+                name: 'mdi-youtube',
+                urllink: "https://www.youtube.com/channel/UCPFX_UHeBwAkCqta9QiRiyw"
+          },
+          {
+                name: 'mdi-linkedin',
+                urllink: "https://www.linkedin.com/in/bendegúzkiss-multimedia/"
+          },
+          {
+                name: 'mdi-instagram',
+                urllink: "https://www.instagram.com/bendeguz_kiss/"
+          }
+      ]}),
   }
 </script>
 

@@ -1,49 +1,17 @@
 <template>
-  <div class="home">
+  <div  class="home" justify="center" >
 
-          <p class="grey--text" src="../assets/homeBG.jpg">backgroundImg</p>
-          
-
-    <h1 class="gray">Hi!<br> My name is <br> Bendegúz Kiss!</h1>
-    <v-layout >
-      <v-flex>
-        <v-btn elevation="15"  height="80" width="200" class="btn primary secondary--text">Get to know me!</v-btn>
-      </v-flex>
-    </v-layout>
+    <h1 class="greeting ma-8 pa-4">Hi!<br> My name is <br> Bendegúz Kiss!</h1>
+   
+    <v-container justify="center" class="my-5">    
+        <v-btn elevation="15"  height="80" width="200" class="btn primary secondary--text" @click="bottom=!bottom">Get to know me!</v-btn>
+          <div v-show=" bottom=true" class="links secodary">
+          <router-link to="/about" class="ma-4 pa-4">Learn more ABOUT me!</router-link> <br>
+          <router-link to="/Archives" class="ma-4 pa-4">Check out my previous artworks and projects in the Archive!</router-link> <br>
+          <router-link to="/ContactMe" class="ma-4 pa-4">Get in touch with me!</router-link> <br>
+      </div>
+    </v-container>
   
-    <v-container class="my-10">
-      <botton class="button button-close " align="center" justify="center">Learn more ABOUT me!</botton>
-    </v-container>
-        <v-container class="my-10">
-          <p>Check out my previous artworks and projects in the ARCHIVES!</p>
-        </v-container>
-    <v-container  class="my-10">
-      <p>Get in touch with me at CONTACT ME!</p>
-    </v-container>
-
-<v-row  class="dropdown">
-    <v-expansion-panels inset>
-      <v-expansion-panel
-      >
-        <v-expansion-panel-header class=" primary secondary--text">Get to know me!</v-expansion-panel-header>
-        <v-expansion-panel-content>
-              <v-row >
-                  <v-expansion-panels inset >
-                    <v-expansion-panel
-                      v-for="(item,i) in 3"
-                      :key="i"
-                    >
-                      <v-expansion-panel-header>Item</v-expansion-panel-header>
-                      <v-expansion-panel-content>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      </v-expansion-panel-content>
-                    </v-expansion-panel>
-                  </v-expansion-panels>
-                </v-row>        
-        </v-expansion-panel-content>
-      </v-expansion-panel>
-    </v-expansion-panels>
-  </v-row>   
 
   </div>
 </template>
@@ -54,26 +22,38 @@
 export default {
   data() {
     return {
-      count: 0 ,
+      bottom: false ,
   }
 }};
 
 
 </script>
 <style>
+
+.home{
+  background-image: url("../assets/homeBG.jpg");
+  background-blend-mode: screen ;
+  background-attachment: scroll ;
+  background-size: cover;
+  
+
+}
+.greeting{
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 270px;  
+}
 .btn{
   display: flex;
   justify-items: center;
   align-self: center;
 }
-.dropdown{
+.links{
   display: flex;
-  justify-content: center;
-  align-content: center;
-  width: 300px;
-  height: 80px;
-  border-radius: 15px 15px 15px 51px;
-  
+  justify-items: center;
+  align-self: center;
+  background: rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  width: 500px;
 }
 
 

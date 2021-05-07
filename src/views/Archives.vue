@@ -11,8 +11,8 @@
           </v-flex>
         </v-layout>
       </v-card>
-      <v-carousel>
-    <v-carousel-item
+      <v-carousel class="ma-4">
+    <v-carousel-item fit 
       v-for="(item,i) in items"
       :key="i"
       :src="item.src"
@@ -33,11 +33,12 @@
 
     <v-container row>
       <v-card
-    class="mx-auto"
+    class="ma-4"
+    width="auto"
     max-width="500"
   >
     <v-img
-      src="../assets/homeBG.jpg"
+      src="../assets/Archive/magicaloceans.png"
       height="200px"
     ></v-img>
 
@@ -72,18 +73,21 @@
         <v-divider></v-divider>
 
         <v-card-text>
-          I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.
+          At the end of the first semester, we had to make an educational webpage connected to seas and oceans. The topic was very open about the content, so you could write about the pollution, sea life or the transportation, anything. <br>
+          My goup had the same mindset and we came up with many creating and great ideas. We decided to include the indangered the levels of the water, species, pollution and energy.
         </v-card-text>
+        <a href="http://joci.intuitivecomputers.eu/s1exam/"> here is the page</a>
       </div>
     </v-expand-transition>
   </v-card>
 
       <v-card
-    class="mx-auto"
+    class="ma-4"
+    width=" auto"
     max-width="500"
   >
     <v-img
-      src="../assets/homeBG.jpg"
+      src="../assets/Archive/shortmovie.png"
       height="200px"
     ></v-img>
 
@@ -107,7 +111,7 @@
 
       <v-btn
         icon
-        @click="show = !show"
+        @click="show= !show"
       >
         <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
       </v-btn>
@@ -118,8 +122,13 @@
         <v-divider></v-divider>
 
         <v-card-text>
-          I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.
+          In the second semester we had the project called Short-movie. For this you had to make a couple minutes long little film. <br>
+          We had to work in goups of 4-5 but, due to the pandemic situation, i got stuck at home in my home country. So I had to make it on my own. <br>
+          Fortunately, I have many friend who helped me a little. We made this short-movie with a ridiculously small budget. <br>
+          Enjoy!
         </v-card-text>
+        <video src="../assets/Archive/TheMoneyWay.FINAL.mp4" class="video" controls></video>
+
       </div>
     </v-expand-transition>
   </v-card>
@@ -137,18 +146,20 @@
     data: () => ({
       show: false,
         items: [
+          
           {
-            src: '../assets/homeBG.jpg',
+            src: require('../assets/Archive/contest.1.png'),
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+            src: require('../assets/Archive/bigmckp.jpg'),
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+            src: require('../assets/Archive/beaturself.headless.jpg'),
           },
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+            src: require('../assets/Archive/poster.itiswhatitis.png'),
           },
+
         ],
       
     
@@ -157,6 +168,11 @@
 </script>
 
 <style>
-
-
+.video{
+  display: flex;
+  width: 500px;
+  height: 350px;
+  align-self: center;
+  justify-self: center;
+}
 </style>
